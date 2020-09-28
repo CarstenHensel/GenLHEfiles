@@ -100,23 +100,8 @@ def matchParams(mass):
     elif mass<2851: return 168, 0.364
     else: return 168., 0.364
 
-# Parameters that define the grid in the bulk and diagonal
-class gridBlock:
-  def __init__(self, xmin, xmax, xstep):
-    self.xmin = xmin
-    self.xmax = xmax
-    self.xstep = xstep
 
-#not really needed in this scan
-scanBlocksMGlu = []
-scanBlocksMGlu.append(gridBlock(2000, 2001, 50))
-#CH scanBlocksMN1 = []
-#CH scanBlocksMN1.append(gridBlock(0, 1601, 50))
-scanBlocksMN2 = []
-scanBlocksMN2.append(gridBlock(1000, 1801, 200))
 
-dMGluN1min = 200
-dMGluN2    = 50
 # weighted average of matching efficiencies for the full scan
 # must equal the number entered in McM generator params
 mcm_eff = 0.282
@@ -131,7 +116,7 @@ mglu = 2000
 mlsp = 1
 
 qcut, tru_eff = matchParams(mglu)
-wgt = point[2]*(mcm_eff/tru_eff)
+wgt = nev * (mcm_eff/tru_eff)
 
 for mass in nlsp_masses:
     mnlsp = mass
