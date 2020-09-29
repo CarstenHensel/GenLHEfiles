@@ -145,8 +145,8 @@ for mass in nlsp_masses:
             '25:onIfAny = 5', #Only H->bb
         ), 
         parameterSets = cms.vstring('pythia8CommonSettings',
-                                    'pythia8CUEP8M1Settings',
-                                    #'pythia8CP2Settings',
+                                    #'pythia8CUEP8M1Settings',
+                                    'pythia8CP2Settings',
                                     'JetMatchingParameters'
         )
     )
