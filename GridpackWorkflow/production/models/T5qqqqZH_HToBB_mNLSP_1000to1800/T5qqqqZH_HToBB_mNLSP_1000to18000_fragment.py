@@ -1,8 +1,8 @@
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
-#from Configuration.Generator.MCTunes2017.PythiaCP2Settings_cfi import *
+#from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+from Configuration.Generator.MCTunes2017.PythiaCP2Settings_cfi import *
 
 baseSLHATable="""
 BLOCK MASS  # Mass Spectrum
